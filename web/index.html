@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+
+	<head>
+				
+	<title>{{abc}}</title>
+	<link href="css/default.css" rel="stylesheet">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js">
+	</script>	
+	<script type="text/javascript" src="js/default.js">
+	</script>
+
+	</head>
+	
+	<body>
+
+	<div id="topbar"></div>
+	<div id="mp">
+	<div id="about"><a href="#">About</a></div>
+	<div id="mptitle">
+		<div class="mptitles"><center>Guess the Movie!</center></div>
+		<div class="mptitles"><center>{{mvi}}</center></div>
+		<div class="hw"><center>{{hw}}</center></div>
+	</div>
+
+	<div id="notif"><center>{{ntf}}</center></div>
+
+	<form action="/guess" method="post">
+		 <center><div><input id="box" type="text" class="textbox" name="content" autocomplete="off">
+            <input type="submit" class="btn" value="Guess"></div></center>
+    </form>
+    <form action="/reset" method="post">
+            <div><center><input type="submit" class="btn" value="Reset"></center></div>
+    </form>
+
+	</div>
+	<div id="lower">	
+		<center>Made as a part of the<br> Google App Engine Workshop</center>
+	</div>
+
+	</body>
+
+</html>
+{% endautoescape %}
